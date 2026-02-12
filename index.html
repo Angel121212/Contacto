@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- ✅ SEO OPTIMIZADO CON TU INFORMACIÓN -->
+    <meta name="description"
+        content="Emilio Becerra Tello - Estudiante de Ingeniería de Software (8.º ciclo UTP). Cisco CCNA, inglés avanzado TOEFL. Desarrollo web con Spring Boot, PHP, MySQL. Proyectos: sitio web en Google Cloud, videojuego en Java, sistemas CRUD. Documentación técnica SRS y UML.">
+    <meta name="author" content="Emilio Becerra Tello">
+    <meta name="keywords"
+        content="Emilio Becerra, Ingeniería de Software, UTP, Cisco CCNA, Spring Boot, Java, desarrollo web, Lima, Perú">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f8f8f8" media="(prefers-color-scheme: light)">
+
+    <title>Emilio Becerra Tello · Ing. Software · UTP</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ------------------------------------------------
+       VARIABLES CSS · TEMA OSCURO/CLARO
+       ------------------------------------------------ */
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #0c0c0c;
+            --bg-tertiary: #101010;
+            --bg-card: #0e0e0e;
+            --bg-soft: #111111;
+            --border-light: #1e1e1e;
+            --border-medium: #2a2a2a;
+            --border-strong: #3a3a3a;
+            --text-primary: #eaeaef;
+            --text-secondary: #c6c6c6;
+            --text-tertiary: #a0a0a0;
+            --text-muted: #8f8f8f;
+            --accent-subtle: #d4d4d4;
+            --accent-border: #5a5a5a;
+            --shadow-color: rgba(0, 0, 0, 0.8);
+            --icon-color: #c0c0c0;
+            --btn-bg: #2a2a2a;
+            --btn-border: #4a4a4a;
+            --btn-hover: #3a3a3a;
+            --line-color: rgba(200, 200, 200, 0.08);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8f8f8;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f2f2f2;
+            --bg-card: #ffffff;
+            --bg-soft: #eaeaea;
+            --border-light: #d4d4d4;
+            --border-medium: #b0b0b0;
+            --border-strong: #909090;
+            --text-primary: #1e1e1e;
+            --text-secondary: #3a3a3a;
+            --text-tertiary: #5a5a5a;
+            --text-muted: #7a7a7a;
+            --accent-subtle: #3a3a3a;
+            --accent-border: #7a7a7a;
+            --shadow-color: rgba(0, 0, 0, 0.05);
+            --icon-color: #5a5a5a;
+            --btn-bg: #e0e0e0;
+            --btn-border: #b0b0b0;
+            --btn-hover: #d0d0d0;
+            --line-color: rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            font-weight: 300;
+            transition: background-color 0.2s ease, color 0.15s ease, border-color 0.2s;
+            scroll-behavior: smooth;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 0 0 8px 0;
+            border-right: 2px solid var(--accent-border);
+            border-bottom: 2px solid var(--accent-border);
+            text-decoration: none;
+            font-weight: 500;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            outline: 2px solid var(--accent-border);
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--accent-subtle);
+            outline-offset: 2px;
+        }
+
+
+        .logo_uni {
+            width: 100px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 3.8rem);
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--line-color);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        /* ---------- HEADER CON HAMBURGUESA ---------- */
+        header {
+            padding: 1.2rem 0;
+            background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--text-tertiary);
+            font-weight: 300;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* ----- HAMBURGER MENU ----- */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .hamburger .bar {
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 0.2rem 0;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-subtle);
+            transition: width 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-medium);
+            border-radius: 60px;
+            padding: 0.5rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--border-strong);
+            background: var(--bg-soft);
+            color: var(--text-primary);
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 5rem 0 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin: 1.5rem 0 2rem;
+            max-width: 90%;
+        }
+
+        .hero-highlight {
+            color: var(--accent-subtle);
+            border-bottom: 1.5px solid var(--accent-border);
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--btn-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--btn-border);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--btn-hover);
+            border-color: var(--accent-border);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-medium);
+            color: var(--text-secondary);
+        }
+
+        .btn-outline:hover,
+        .btn-outline:focus {
+            border-color: var(--accent-subtle);
+            color: var(--text-primary);
+            background: color-mix(in srgb, var(--bg-soft) 50%, transparent);
+        }
+
+        .hero-avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar-frame {
+            background: linear-gradient(145deg, var(--bg-tertiary), var(--bg-primary));
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-medium);
+            box-shadow: 0 20px 30px -10px var(--shadow-color);
+        }
+
+        .avatar-inner {
+            background: var(--bg-card);
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-medium);
+        }
+
+        .avatar-inner i {
+            font-size: 5rem;
+            color: var(--icon-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .avatar-inner h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .avatar-inner p {
+            color: var(--text-tertiary);
+        }
+
+        /* ---------- SOBRE MÍ ---------- */
+        .about {
+            padding: 4rem 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .soft-skills {
+            background: var(--bg-card);
+            padding: 1.8rem 2rem;
+            border-radius: 28px;
+            border: 1px solid var(--border-medium);
+        }
+
+        .soft-skills h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-item i {
+            width: 30px;
+            color: var(--icon-color);
+        }
+
+        /* ---------- INFORMACIÓN PERSONAL ---------- */
+        .personal-info {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .personal-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+        }
+
+        .info-item i {
+            width: 20px;
+            color: var(--icon-color);
+        }
+
+        /* ---------- STACK ---------- */
+        .toolkit {
+            padding: 4rem 0;
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 28px;
+            padding: 1.8rem;
+        }
+
+        .tool-category h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .tool-item {
+            background: var(--bg-soft);
+            border: 1px solid var(--border-medium);
+            border-radius: 40px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* En tu CSS */
+        .fa-html5 {
+            color: #E34F26;
+        }
+
+        /* Naranja HTML5 */
+        .fa-css3-alt {
+            color: #1572B6;
+        }
+
+        /* Azul CSS3 */
+        .fa-js {
+            color: #F7DF1E;
+        }
+
+        /* Amarillo JavaScript */
+        .fa-java {
+            color: #007396;
+        }
+
+        /* Azul Java */
+        .fa-php {
+            color: #777BB4;
+        }
+
+        /* Púrpura PHP */
+        .fa-node-js {
+            color: #339933;
+        }
+
+        /* Verde Node.js */
+        .fa-database {
+            color: #4479A1;
+        }
+
+        /* Azul MySQL */
+        /* ---------- PROYECTOS ---------- */
+        .projects {
+            padding: 5rem 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .github-link {
+            color: var(--text-secondary);
+            border: 1px solid var(--border-medium);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .github-link:hover,
+        .github-link:focus {
+            background: var(--bg-soft);
+            border-color: var(--border-strong);
+            color: var(--text-primary);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+        }
+
+        .project-card:hover,
+        .project-card:focus {
+            border-color: var(--border-strong);
+            transform: translateY(-4px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 170px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .project-info {
+            padding: 1.8rem 1.5rem;
+            flex: 1;
+        }
+
+        .project-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tag {
+            background: var(--bg-soft);
+            border: 1px solid var(--border-medium);
+            border-radius: 50px;
+            padding: 0.2rem 1rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---------- CERTIFICACIONES ---------- */
+        .certificates {
+            padding: 4rem 0;
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 28px;
+            padding: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            color: var(--icon-color);
+        }
+
+        .cert-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-info p {
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+
+        /* ---------- NOTAS ---------- */
+        .notes {
+            padding: 4rem 0;
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .note-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 28px;
+            padding: 1.8rem;
+        }
+
+        .note-icon {
+            font-size: 1.6rem;
+            color: var(--icon-color);
+            margin-bottom: 1rem;
+        }
+
+        .note-quote {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            font-weight: 350;
+            margin-bottom: 1rem;
+        }
+
+        .note-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1rem;
+        }
+
+        /* ---------- CONTACTO ---------- */
+        .contact {
+            padding: 4rem 0 5rem;
+            background-color: var(--bg-secondary);
+            text-align: center;
+        }
+
+        .contact h2 {
+            border-bottom: none;
+        }
+
+        .contact-lead {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 60px;
+            padding: 0.8rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .contact-card:hover,
+        .contact-card:focus {
+            border-color: var(--border-strong);
+            background: var(--bg-soft);
+            color: var(--text-primary);
+        }
+
+        footer {
+            background-color: var(--bg-primary);
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-light);
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* ---------- RESPONSIVE HAMBURGUESA ---------- */
+        @media (max-width: 900px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-right {
+                gap: 1rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--bg-secondary);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+                border-right: 1px solid var(--border-light);
+                z-index: 99;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .toolkit-grid,
+            .project-grid,
+            .cert-grid,
+            .notes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                width: 100%;
+            }
+
+            .toolkit-grid,
+            .project-grid,
+            .cert-grid,
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .avatar-frame {
+                width: 260px;
+                height: 260px;
+            }
+
+            .avatar-inner {
+                width: 210px;
+                height: 210px;
+            }
+
+            .avatar-inner i {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <!-- ✅ HEADER CON HAMBURGUESA FUNCIONAL -->
+    <header role="banner">
+        <div class="container">
+            <nav role="navigation" aria-label="Principal">
+                <div class="logo"><span>+</span> ANGEL E. BECERRA TELLO</div>
+
+                <div class="nav-right">
+                    <!-- Botón hamburguesa -->
+                    <button class="hamburger" id="hamburgerBtn" aria-label="Menú" aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                    <!-- Menú de navegación -->
+                    <div class="nav-links" id="navLinks">
+                        <a href="#about">Sobre mí</a>
+                        <a href="#toolkit">Stack</a>
+                        <a href="#projects">Proyectos</a>
+                        <a href="#certificates">Certificados</a>
+                        <a href="#contact">Contacto</a>
+                    </div>
+
+                    <!-- Botón modo oscuro/claro -->
+                    <button class="theme-toggle" id="themeToggleButton" aria-label="Cambiar modo claro/oscuro">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <h1 id="hero-title">Ingeniería de Software<br><img alt="logo UTP" class="logo_uni"
+                            title="Universidad Tecnológica del Perú" src="/logo_uni.png">
+                    </h1>
+                    <p>Hola, soy <strong>Angel E. Becerra Tello</strong>. Estudiante de Ingeniería de Software con
+                        certificaciones <strong>Cisco CCNA</strong>, inglés avanzado <strong>(TOEFL)</strong> y
+                        experiencia en desarrollo web full-stack, bases de datos y documentación técnica.</p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">Contactar</a>
+                        <a href="#projects" class="btn btn-outline">Ver proyectos</a>
+                    </div>
+                </div>
+                <div class="hero-avatar" aria-hidden="true">
+                    <div class="avatar-frame">
+                        <div class="avatar-inner">
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                            <h3>Angel E. Bece</h3>
+                            <p>· dev ·</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SOBRE MÍ -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">Sobre mí</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p><strong>Estudiante de la carrera de Ingeniería de Software</strong> en la Universidad
+                            Tecnológica del Perú (UTP). Cuento con certificaciones <strong>Cisco (CCNA: Introducción a
+                                redes, Conmutación y redes inalámbricas, IoT)</strong> y una base sólida en desarrollo
+                            web, bases de datos y documentación técnica.</p>
+                        <p>Manejo <strong>HTML y CSS a nivel avanzado</strong>, y poseo conocimientos intermedios en
+                            JavaScript, PHP, Spring Boot, MySQL y SQL Server. He desarrollado proyectos web académicos y
+                            personales, incluyendo sistemas CRUD, aplicaciones educativas y un sitio web institucional
+                            que será implementado en <strong>Hostinger</strong> finales de este mes (Febrero).</p>
+                        <p>Tengo experiencia elaborando documentación de software (SRS, diagramas de Gantt, modelado
+                            UML, casos de uso, etc) y manejo intermedio de Office. Mi objetivo es integrarme a un
+                            entorno
+                            profesional donde pueda aplicar mis conocimientos y seguir creciendo.</p>
+                    </div>
+                    <div>
+                        <div class="soft-skills">
+                            <h3><i class="fas fa-asterisk" aria-hidden="true"></i> formas de trabajar</h3>
+                            <div class="skill-item"><i class="fas fa-circle-nodes"></i><span>Pensamiento
+                                    sistémico</span></div>
+                            <div class="skill-item"><i class="fas fa-arrows-spread"></i><span>Comunicación clara</span>
+                            </div>
+                            <div class="skill-item"><i class="fas fa-compass"></i><span>Orientación a objetivo</span>
+                            </div>
+                            <div class="skill-item"><i class="fas fa-eye"></i><span>Atención al detalle</span></div>
+                            <div class="skill-item"><i class="fas fa-users"></i><span>Coordinación de equipos</span>
+                            </div>
+                        </div>
+
+                        <div class="personal-info">
+                            <h3><i class="fas fa-id-card"></i> Datos personales</h3>
+                            <div class="info-grid">
+                                <div class="info-item"><i class="fas fa-calendar"></i> 21 años · 10/01/2005</div>
+                                <div class="info-item"><i class="fas fa-map-marker-alt"></i> Los Olivos, Lima</div>
+                                <div class="info-item"><i class="fas fa-flag"></i> Peruano</div>
+                                <div class="info-item"><i class="fas fa-university"></i> UTP · 8.° ciclo</div>
+                                <div class="info-item"><i class="fas fa-language"></i> Inglés Avanzado · TOEFL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="toolkit" class="toolkit" aria-labelledby="toolkit-title">
+            <div class="container">
+                <h2 id="toolkit-title">Stack & herramientas</h2>
+                <p style="color: var(--text-tertiary);">Tecnologías que uso en mis proyectos.</p>
+                <div class="toolkit-grid" id="toolkit-container"></div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="projects" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="projects-title">Proyectos destacados</h2>
+                    <a href="https://github.com/EmilioBecerra" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <p style="color: var(--text-tertiary);">Proyectos académicos y personales · 2025</p>
+                <div class="project-grid" id="project-grid"></div>
+            </div>
+        </section>
+
+        <!-- CERTIFICADOS -->
+        <section id="certificates" class="certificates" aria-labelledby="cert-title">
+            <div class="container">
+                <h2 id="cert-title">Certificaciones</h2>
+                <p style="color: var(--text-tertiary);">Cisco · ICPNA · Excel · TOEFL</p>
+                <div class="cert-grid" id="cert-container"></div>
+            </div>
+        </section>
+
+        <!-- NOTAS -->
+        <section id="notes" class="notes" aria-labelledby="notes-title">
+            <div class="container">
+                <h2 id="notes-title">Notas</h2>
+                <p style="color: var(--text-tertiary);">Ideas sobre desarrollo y documentación.</p>
+                <div class="notes-grid" id="notes-container"></div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Conversemos</h2>
+                <div class="contact-lead">¿Trabajamos juntos o simplemente charlar?</div>
+                <div class="contact-options">
+                    <a href="mailto:emilio.becerra.tello@gmail.com" class="contact-card"
+                        aria-label="Enviar correo electrónico">
+                        <i class="far fa-envelope" aria-hidden="true"></i> emilio.becerra.tello@gmail.com
+                    </a>
+                    <a href="https://wa.me/51948716151" target="_blank" class="contact-card"
+                        aria-label="Contactar por WhatsApp">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i> +51 948-716-151
+                    </a>
+                    <a href="www.linkedin.com/in/angel-emilio-becerra-t" target="_blank" class="contact-card"
+                        aria-label="Perfil de LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </div>
+                <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-map-pin"></i> Los Olivos, Lima · Peruano
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>Angel E. Becerra Tello · Ingeniería de Software · UTP 2026</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">© Copyright 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            'use strict';
+
+            // ============================================================
+            // TUS DATOS PERSONALES
+            // ============================================================
+            const USER = {
+                name: 'EMILIO BECERRA',
+                fullName: 'Emilio Becerra Tello',
+                github: 'EmilioBecerra',
+                linkedin: 'emilio-becerra-software',
+                email: 'emilio.becerra.tello@gmail.com',
+                phone: '+51 948-716-151',
+                whatsapp: '51948716151',
+                dni: '75308368',
+                age: '21',
+                birth: '10/01/2005',
+                location: 'Los Olivos, Lima',
+                university: 'UTP - 8.º ciclo'
+            };
+
+            // ============================================================
+            // STACK
+            // ============================================================
+            const TOOLKIT = [
+                {
+                    category: 'Frontend',
+                    icon: 'fa-code',
+                    tools: [
+                        { name: 'HTML5 (avanzado)', icon: 'fa-html5' },
+                        { name: 'CSS3 (avanzado)', icon: 'fa-css3-alt' },
+                        { name: 'JavaScript', icon: 'fa-js' },
+                        { name: 'Figma', icon: 'fa-figma' },
+                        { name: 'Responsive Design', icon: 'fa-mobile-screen' }
+                    ]
+                },
+                {
+                    category: 'Backend',
+                    icon: 'fa-server',
+                    tools: [
+                        { name: 'Java', icon: 'fa-java' },
+                        { name: 'Spring Boot', icon: 'fa-leaf' },
+                        { name: 'PHP', icon: 'fa-php' },
+                        { name: 'APIs REST', icon: 'fa-plug' }
+                    ]
+                },
+                {
+                    category: 'Bases de datos',
+                    icon: 'fa-database',
+                    tools: [
+                        { name: 'MySQL', icon: 'fa-database' },
+                        { name: 'SQL Server', icon: 'fa-database' },
+                        { name: 'MySQL Workbench', icon: 'fa-tools' },
+                        { name: 'Consultas SQL', icon: 'fa-search' }
+                    ]
+                },
+                {
+                    category: 'Testing',
+                    icon: 'fa-flask',
+                    tools: [
+                        { name: 'JMeter' },
+                        { name: 'Mockito' },
+                        { name: 'Pruebas funcionales' }
+                    ]
+                },
+                {
+                    category: 'Documentación',
+                    icon: 'fa-file-alt',
+                    tools: [
+                        { name: 'SRS' },
+                        { name: 'UML' },
+                        { name: 'Casos de uso' },
+                        { name: 'Gantt' },
+                        { name: 'ERD' }
+                    ]
+                },
+                {
+                    category: 'Otros',
+                    icon: 'fa-toolbox',
+                    tools: [
+                        { name: 'Google Cloud', icon: 'fa-google' },
+                        { name: 'Office 365', icon: 'fa-microsoft' },
+                        { name: 'Metodología tradicional' },
+                        { name: 'CCNA' }
+                    ]
+                }
+            ];
+
+            // ============================================================
+            // PROYECTOS
+            // ============================================================
+            const PROJECTS = [
+                {
+                    title: 'Web Institucional - Iglesia',
+                    description: 'Sitio web completo para institución religiosa. Arquitectura full-stack, despliegue en Google Cloud (2025).',
+                    tags: ['Spring Boot', 'HTML/CSS', 'JS', 'Google Cloud'],
+                    icon: 'fa-church'
+                },
+                {
+                    title: 'Videojuego educativo - Lima',
+                    description: 'Juego sobre historia de Lima desarrollado en Java. Diseño de escenas, lógica y documentación.',
+                    tags: ['Java', 'Swing', 'Prototipo'],
+                    icon: 'fa-gamepad'
+                },
+                {
+                    title: 'Plataforma apoyo escolar',
+                    description: 'Aplicación web educativa con JavaScript interactivo y MySQL. Trabajo colaborativo UTP.',
+                    tags: ['JavaScript', 'MySQL', 'CRUD'],
+                    icon: 'fa-graduation-cap'
+                },
+                {
+                    title: 'Sistemas CRUD',
+                    description: 'Implementación de CRUD con Spring Boot, PHP, Java y MySQL Workbench.',
+                    tags: ['Spring Boot', 'PHP', 'MySQL'],
+                    icon: 'fa-arrows-rotate'
+                },
+                {
+                    title: 'Análisis y Diseño UTP',
+                    description: 'Elaboración de SRS, diagramas UML, casos de uso, Gantt y modelado ERD.',
+                    tags: ['SRS', 'UML', 'Gantt'],
+                    icon: 'fa-diagram-project'
+                },
+                {
+                    title: 'Testing con JMeter',
+                    description: 'Pruebas de software, identificación de errores y documentación de incidencias.',
+                    tags: ['JMeter', 'Mockito', 'Calidad'],
+                    icon: 'fa-bug'
+                }
+            ];
+
+            // ============================================================
+            // CERTIFICADOS (TUS 6 REALES)
+            // ============================================================
+            const CERTIFICATES = [
+                { name: 'CCNA: Introducción a redes', issuer: 'Cisco', icon: 'fa-network-wired' },
+                { name: 'CCNA: Conmutación y enrutamiento inalámbrico', issuer: 'Cisco', icon: 'fa-wifi' },
+                { name: 'Introducción al IoT y Transformación Digital', issuer: 'Cisco', icon: 'fa-microchip' },
+                { name: 'Programa de Inglés (Básico - Avanzado)', issuer: 'ICPNA', icon: 'fa-language' },
+                { name: 'TOEFL - Certificación internacional', issuer: 'ICPNA', icon: 'fa-certificate' },
+                { name: 'Excel Intermedio', issuer: 'UTP', icon: 'fa-table' }
+            ];
+
+            // ============================================================
+            // NOTAS
+            // ============================================================
+            const NOTES = [
+                { quote: 'Un buen SRS ahorra más tiempo que cualquier sprint.', icon: 'fa-file-lines', date: '2025' },
+                { quote: 'Documentar no es perder tiempo, es ganar claridad.', icon: 'fa-pen-ruler', date: '2025' },
+                { quote: 'CCNA me enseñó que las redes son como el software: todo conecta.', icon: 'fa-diagram-project', date: '2024' }
+            ];
+
+            // ============================================================
+            // RENDERIZADO
+            // ============================================================
+            function renderToolkit() {
+                const container = document.getElementById('toolkit-container');
+                if (!container) return;
+                container.innerHTML = TOOLKIT.map(cat => `
+    <div class="tool-category">
+      <h3><i class="fas ${cat.icon}"></i> ${cat.category}</h3>
+      <div class="tool-list">
+        ${cat.tools.map(t =>
+                    `<span class="tool-item">
+            <i class="fab ${t.icon}" style="font-size: 0.9rem; margin-right: 4px;"></i> 
+            ${t.name}
+          </span>`
+                ).join('')}
+      </div>
+    </div>
+  `).join('');
+            }
+
+            function renderProjects() {
+                const grid = document.getElementById('project-grid');
+                if (!grid) return;
+                grid.innerHTML = PROJECTS.map(p => `
+          <a href="https://github.com/${USER.github}" target="_blank" class="project-card">
+            <div class="project-image"><i class="fas ${p.icon}"></i></div>
+            <div class="project-info">
+              <h3>${p.title}</h3>
+              <p>${p.description}</p>
+              <div class="project-tags">
+                ${p.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+          </a>
+        `).join('');
+            }
+
+            function renderCertificates() {
+                const container = document.getElementById('cert-container');
+                if (!container) return;
+                container.innerHTML = CERTIFICATES.map(cert => `
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fas ${cert.icon}"></i></div>
+            <div class="cert-info">
+              <h4>${cert.name}</h4>
+              <p>${cert.issuer}</p>
+            </div>
+          </div>
+        `).join('');
+            }
+
+            function renderNotes() {
+                const container = document.getElementById('notes-container');
+                if (!container) return;
+                container.innerHTML = NOTES.map(n => `
+          <div class="note-card">
+            <div class="note-icon"><i class="fas ${n.icon}"></i></div>
+            <div class="note-quote">“${n.quote}”</div>
+            <div class="note-meta">
+              <span><i class="far fa-calendar"></i> ${n.date}</span>
+            </div>
+          </div>
+        `).join('');
+            }
+
+            // ============================================================
+            // HAMBURGUESA MENU - TOTALMENTE FUNCIONAL
+            // ============================================================
+            function initHamburger() {
+                const hamburger = document.getElementById('hamburgerBtn');
+                const navLinks = document.getElementById('navLinks');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                        navLinks.classList.toggle('active');
+                        const expanded = this.classList.contains('active');
+                        this.setAttribute('aria-expanded', expanded);
+                    });
+
+                    navLinks.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', function () {
+                            hamburger.classList.remove('active');
+                            navLinks.classList.remove('active');
+                            hamburger.setAttribute('aria-expanded', 'false');
+                        });
+                    });
+                }
+            }
+
+            // ============================================================
+            // TEMA OSCURO/CLARO
+            // ============================================================
+            function initTheme() {
+                const themeToggle = document.getElementById('themeToggleButton');
+                const themeIcon = document.getElementById('themeIcon');
+                const themeText = document.getElementById('themeText');
+                const html = document.documentElement;
+
+                let savedTheme = localStorage.getItem('theme');
+                if (!savedTheme) {
+                    savedTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+
+                html.setAttribute('data-theme', savedTheme);
+                updateThemeUI(savedTheme, themeIcon, themeText);
+
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const currentTheme = html.getAttribute('data-theme') || 'dark';
+                        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                        html.setAttribute('data-theme', newTheme);
+                        localStorage.setItem('theme', newTheme);
+                        updateThemeUI(newTheme, themeIcon, themeText);
+                    });
+                }
+            }
+
+            function updateThemeUI(theme, iconEl, textEl) {
+                if (!iconEl || !textEl) return;
+                iconEl.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+
+            }
+
+            // ============================================================
+            // INICIAR TODO
+            // ============================================================
+            renderToolkit();
+            renderProjects();
+            renderCertificates();
+            renderNotes();
+            initHamburger();
+            initTheme();
+        })();
+    </script>
+</body>
+
+</html>
