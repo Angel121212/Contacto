@@ -53,7 +53,7 @@ size: 'large'
             desc: 'Aplicación web que permite ver información de la empresa, productos y detalles de lis mismos. Además, cuenta con sección de compra/venta con actualizaciones por parte del administrador.',
             tags: ['JS', 'HTML5', 'CSS3', 'PHP', 'más...'],
             icon: 'fa-shop',
-            image: '/Contacto/cafeteria_djulia_background.png',
+            image: 'cafeteria_djulia_background.png',
             size: 'medium'
         },
         {
@@ -334,4 +334,5 @@ size: 'large'
     }
     initAll();
 })();
+
 
