@@ -37,7 +37,7 @@ size: 'large'
             desc: 'Juego sobre historia de Lima desarrollado netamente en Java. Con finalidad de enseñar datos historicos de la capital del Perú.',
             tags: ['Java'],
             icon: 'fa-gamepad',
-            image: '/Contacto/juego_2D_background.png',
+            image: 'juego_2D_background.png',
             size: 'medium'
         },
         {
@@ -45,7 +45,7 @@ size: 'large'
             desc: 'Aplicación web desarrollada para enseñar historia del Perú a niños de entre 8 - 20 años. Arquitectura full-stack.',
             tags: ['Spring Boot', 'React', 'Bootstrap', 'MySQL', 'JS', 'HTML5', 'css3', 'Java', 'más...'],
             icon: 'fa-keyboard',
-            image: '/Contacto/juego_qhapac_background.png',
+            image: 'juego_qhapac_background.png',
             size: 'medium'
         },
         {
@@ -61,7 +61,7 @@ size: 'large'
             desc: 'Aplicación web informativo de la cafetería Nostalgia, la aplicación permite realizar ventas y modificaciones por parte del administrador.',
             tags: ['js', 'HTML5', 'CSS3', 'JAVA', 'Spring Boot', 'PHP', 'h2'],
             icon: 'fa-shop',
-            image: '/Contacto/cafeteria_nostalgia_background.png',
+            image: 'cafeteria_nostalgia_background.png',
             size: 'medium'
         },
         {
@@ -334,3 +334,4 @@ size: 'large'
     }
     initAll();
 })();
+
