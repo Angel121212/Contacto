@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Becerra · software engineer</title>
+
+    <link rel="icon" id="dynamicFavicon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%232a2a2a' font-weight='600'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Angel E. Becerra Tello· Ingeniero de Software | Full-stack Developer</title>
+    <meta name="description"
+        content="Portfolio de Angel Becerra, Ingeniero de Software en formación. Especialista en desarrollo full-stack, Spring Boot, PHP, MySQL y documentación técnica. Certificaciones Cisco CCNA e inglés TOEFL.">
+    <meta name="keywords"
+        content="Angel Becerra, software engineer, desarrollador full-stack, Lima, Perú, Spring Boot, PHP, MySQL, Cisco CCNA, TOEFL, portfolio, programador">
+    <meta name="author" content="Angel Emilio Becerra Tello">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="7 days">
+
+    <link rel="canonical" href="https://angel121212.github.io/Contacto/">
+
+    <link rel="icon" id="dynamicFavicon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%232a2a2a' font-weight='600'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+
+    <meta property="og:title" content="Angel Becerra · Ingeniero de Software">
+    <meta property="og:description"
+        content="Portfolio profesional con proyectos full-stack, certificaciones Cisco CCNA y documentación técnica.">
+    <meta property="og:image" content="/Contacto/profile_web_out.jpeg">
+    <meta property="og:url" content="https://angel121212.github.io/Contacto/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Angel Becerra · Portfolio">
+    <meta property="og:locale" content="es_PE">
+
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Angel Emilio Becerra Tello",
+        "url": "https://angel121212.github.io/Contacto/",
+        "image": "/Contacto-AngelBecerraTello/profile_web_out.jpeg",
+        "sameAs": [
+            "https://linkedin.com/in/angel-emilio-becerra-t",
+            "https://github.com/Angel121212"
+        ],
+        "jobTitle": "Ingeniero de Software",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Tecnológica del Perú"
+        },
+        "knowsAbout": ["Spring Boot", "PHP", "MySQL", "Cisco CCNA", "Desarrollo Full-stack"]
+    }
+    </script>
+</head>
+
+<body>
+    <div class="modal-overlay" id="cvModal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3>Visualizar CV</h3>
+            <p>Para Visualizar mi CV, déjame tus datos. Así sé quién se interesa en mi perfil.</p>
+            <form id="cvForm">
+                <div class="form-group">
+                    <label>Nombre completo *</label>
+                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="form-group">
+                    <label>Empresa (opcional)</label>
+                    <input type="text" id="empresa" placeholder="¿Dónde trabajas?">
+                </div>
+                <button type="submit" class="modal-btn">Visualizar CV</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">A.E.B.T<span> · dev</span></div>
+
+            <button class="hamburger" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="#inicio">inicio</a>
+                    <a href="#stack">stack</a>
+                    <a href="#proyectos">proyectos</a>
+                    <a href="#contacto">contacto</a>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </header>
+
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>
+                    Angel E. Becerra Tello
+                    <span>Ing. software</span>
+                </h1>
+
+                <div class="hero-info-grid">
+                    <div class="hero-info-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>21 años</span>
+                    </div>
+                    <div class="hero-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Los Olivos, <strong>Lima</strong></span>
+                    </div>
+                    <div class="hero-info-item">
+                        <i class="fas fa-university"></i>
+                        <span>UTP · <strong>8° ciclo</strong></span>
+                    </div>
+                    <div class="hero-info-item">
+                        <i class="fas fa-language"></i>
+                        <span>Inglés · <strong>TOEFL</strong></span>
+                    </div>
+                    <div class="hero-info-item">
+                        <i class="fas fa-certificate"></i>
+                        <span><strong>6</strong> certificaciones</span>
+                    </div>
+                    <div class="hero-info-item">
+                        <i class="fas fa-code"></i>
+                        <span><strong>Full-stack</strong> developer</span>
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Estudiante de Ingeniería de Software con certificaciones Cisco CCNA y experiencia en desarrollo
+                    full-stack, bases de datos y documentación técnica.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn">Contactar</a>
+                    <button class="btn btn-cv" id="downloadCvBtn">
+                        <i class="fas fa-download"></i> Visualizar CV
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">proyectos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">certificados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8°</span>
+                        <span class="stat-label">ciclo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="photo-frame">
+                    <div class="photo"> <img src="/Contacto/profile_web_out.jpeg"> </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="about-short">
+            <p>
+                <strong>Estudiante de Ingeniería de Software</strong> en la Universidad Tecnológica del Perú,
+                con certificaciones <strong>Cisco CCNA</strong> (Introducción a redes, Conmutación, IoT)
+                e <strong>inglés avanzado TOEFL</strong>. Me especializo en desarrollo full-stack con
+                <strong>Spring Boot, PHP, MySQL</strong> y documentación técnica (SRS, UML, Gantt).
+                Busco crear soluciones claras y funcionales.
+            </p>
+        </div>
+
+        <section id="stack">
+            <h2 class="section-title">stack</h2>
+            <div class="stack-grid" id="stackGrid"></div>
+        </section>
+
+        <section id="proyectos">
+            <h2 class="section-title">proyectos</h2>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </section>
+
+        <section id="certificados">
+            <h2 class="section-title">certificaciones</h2>
+            <div class="cert-grid" id="certGrid"></div>
+        </section>
+
+        <section id="notas">
+            <h2 class="section-title">notas</h2>
+            <div class="notes-grid" id="notesGrid"></div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">contacto</h2>
+            <div class="contact-grid" id="contactGrid"></div>
+        </section>
+
+        <footer>
+            <p> © copyright 2026 · Web Personal · Angel E. Becerra Tello</p>
+        </footer>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
