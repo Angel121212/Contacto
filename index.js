@@ -2,7 +2,6 @@
 (function () {
     const STACK = [
         { name: 'React', icon: 'fab fa-react' },
-        { name: 'Angular', icon: 'fab fa-angular' },
         { name: 'HTML5', icon: 'fab fa-html5' },
         { name: 'CSS3', icon: 'fab fa-css3-alt' },
         { name: 'JavaScript', icon: 'fab fa-js' },
@@ -12,7 +11,7 @@
         { name: 'Figma', icon: 'fab fa-figma' },
         { name: 'Git', icon: 'fab fa-git-alt' },
         { name: 'GitHub', icon: 'fab fa-github' },
-        { name: 'Google Cloud', icon: 'fab fa-google' },
+        { name: 'Hostinger' },
         { name: 'Office 365', icon: 'fab fa-microsoft' },
         { name: 'Firebase', icon: 'fab fa-firebase' },
 
@@ -24,14 +23,7 @@
     ];
 
     const PROJECTS = [
-        /*   {
-title: 'Sistema de Gestión Eclesiástica - Iglesia Alianza',
-desc: 'Plataforma web integral para la administración y comunicación de la iglesia. Módulos implementados: Gestión de miembros (registro, roles, permisos), calendario interactivo con Google Calendar para cultos y eventos, mapas de ubicación con Google Maps para todas las sedes, sistema de ofrendas y diezmos con registro histórico, biblioteca de sermones (audio/video/texto), blog de devocionales diarios, galería multimedia, sistema de notificaciones por correo, panel administrativo con estadísticas, gestión de usuarios y contenido dinámico. Desarrollado con arquitectura MVC, base de datos relacional y despliegue en hosting compartido.',
-tags: ['Google APIs', 'HTML5', 'CSS3', 'js', 'PHP', 'MySQL', 'AJAX', 'Hostinger'],
-icon: 'fa-place-of-worship',
-image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600',
-size: 'large'
-           },*/
+
         {
             title: 'Videojuego educativo',
             desc: 'Juego sobre historia de Lima desarrollado netamente en Java. Con finalidad de enseñar datos historicos de la capital del Perú.',
@@ -49,8 +41,8 @@ size: 'large'
             size: 'medium'
         },
         {
-            title: 'Aplicacion Web para pastelería J´Julia (ecommerce)',
-            desc: 'Aplicación web que permite ver información de la empresa, productos y detalles de lis mismos. Además, cuenta con sección de compra/venta con actualizaciones por parte del administrador.',
+            title: 'Aplicación Web para pastelería J´Julia (ecommerce)',
+            desc: 'Aplicación web que permite ver información de la empresa, productos y detalles de los mismos. Además, cuenta con sección de compra/venta con actualizaciones por parte del administrador.',
             tags: ['JS', 'HTML5', 'CSS3', 'PHP', 'más...'],
             icon: 'fa-shop',
             image: 'cafeteria_djulia_background.png',
@@ -334,5 +326,6 @@ size: 'large'
     }
     initAll();
 })();
+
 
 
