@@ -11,7 +11,7 @@ https://angelbecerratello.me/
 
 ## Descripción
 
-Este repositorio contiene el código y la referencia del portafolio web personal de Angel Becerra Tello, Estudainte de Ingenieria de Software.
+Este repositorio contiene el código y la referencia del portafolio web personal de Angel Becerra Tello, Estudiante de Ingenieria de Software.
 
 El sitio tiene como finalidad presentar información profesional, proyectos desarrollados, habilidades técnicas y experiencia en el área de desarrollo de software y tecnología.
 
