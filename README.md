@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/cover.png" alt="Portafolio web - Angel Becerra Tello" width="850">
+  <img src="readme_imgs/cover.png" alt="Portafolio web - Angel Becerra Tello" width="850">
 </p>
 
 # Portafolio Web - Angel Becerra Tello
