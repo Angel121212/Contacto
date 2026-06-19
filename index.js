@@ -53,7 +53,7 @@
       desc: "Juego sobre historia de Lima desarrollado netamente en Java. Con finalidad de enseñar datos historicos de la capital del Perú.",
       tags: ["Java"],
       icon: "fa-gamepad",
-      image: "/Contacto/juego_2D_background.png",
+      image: "juego_2D_background.png",
       size: "medium",
     },
     {
@@ -71,7 +71,7 @@
         "más...",
       ],
       icon: "fa-keyboard",
-      image: "/Contacto/juego_qhapac_background.png",
+      image: "juego_qhapac_background.png",
       size: "medium",
     },
     {
@@ -79,7 +79,7 @@
       desc: "Aplicación web que permite ver información de la empresa, productos y detalles de lis mismos. Además, cuenta con sección de compra/venta con actualizaciones por parte del administrador.",
       tags: ["JS", "HTML5", "CSS3", "PHP", "más..."],
       icon: "fa-shop",
-      image: "/Contacto/cafeteria_djulia_background.png",
+      image: "cafeteria_djulia_background.png",
       size: "medium",
     },
     {
@@ -87,7 +87,7 @@
       desc: "Aplicación web informativo de la cafetería Nostalgia, la aplicación permite realizar ventas y modificaciones por parte del administrador.",
       tags: ["js", "HTML5", "CSS3", "JAVA", "Spring Boot", "PHP", "h2"],
       icon: "fa-shop",
-      image: "/Contacto/cafeteria_nostalgia_background.png",
+      image: "cafeteria_nostalgia_background.png",
       size: "medium",
     },
     {
@@ -240,7 +240,7 @@
       category: "Actualización",
       icon: "fa-rocket",
       tags: ["Portafolio", "Actualización", "Diseño"],
-      image: "/Contacto/cover_2.png",
+      image: "cover_2.png",
       type: "image",
     },
     {
@@ -308,7 +308,7 @@
       category: "Actualización",
       icon: "fa-linkedin-in",
       tags: ["LinkedIn", "Actualización", "Perfil"],
-      image: "/Contacto/linkedin_profile.png",
+      image: "linkedin_profile.png",
       type: "image",
     },
     {
@@ -353,7 +353,7 @@
       category: "Proyectos",
       icon: "fa-globe",
       tags: ["Portafolio", "README", "Web"],
-      image: "/Contacto/cover.png",
+      image: "cover.png",
       type: "image",
     },
     {
@@ -434,7 +434,7 @@
       category: "Redes",
       icon: "fa-server",
       tags: ["Cisco", "DNS", "DHCP"],
-      image: "/Contacto/profile_cisco.png",
+      image: "profile_cisco.png",
       type: "image",
     },
     {
@@ -475,7 +475,7 @@
       category: "Proyectos",
       icon: "fa-coffee",
       tags: ["Spring Boot", "Java", "MVC", "Cafetería"],
-      image: "/Contacto/cafeteria_nostalgia_background.png",
+      image: "cafeteria_nostalgia_background.png",
       type: "image",
     },
     {
@@ -499,7 +499,7 @@
       category: "Proyectos",
       icon: "fa-gamepad",
       tags: ["Java", "Videojuego", "Educación"],
-      image: "/Contacto/juego_2D_background.png",
+      image: "juego_2D_background.png",
       type: "video",
       videoId: "csayM97q4m8",
     },
