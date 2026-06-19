@@ -194,8 +194,8 @@
       <span><i class="fas fa-tag"></i> Generación Top, UTP, Excelencia</span>
       <span><i class="far fa-calendar-alt"></i> 2026</span>
   </div>`,
-      date: "18/06/2026",
-      category: "Logros",
+      date: "17/06/2026",
+      category: " 📌Logros",
       icon: "fa-star",
       tags: ["Generación Top", "UTP", "Excelencia"],
       image:
@@ -204,6 +204,47 @@
     },
     {
       id: 2,
+      title: "🚀 Nueva versión de mi portafolio web - 2026",
+      excerpt:
+        "He renovado completamente mi portafolio con un diseño moderno, nuevas secciones y mejor experiencia de usuario.",
+      content: `<p>¡Mi portafolio web tiene una nueva versión! 🎉</p>
+  
+  <p>He trabajado en una renovación completa del sitio, con un diseño inspirado en la estética de Apple, nuevas funcionalidades y una experiencia más fluida para los visitantes.</p>
+  
+  <h4>✨ Novedades de esta versión</h4>
+  <ul>
+      <li><strong>🎨 Diseño renovado:</strong> Estilo Apple con glassmorphism y tipografía SF Pro.</li>
+      <li><strong>📱 Responsive mejorado:</strong> Experiencia optimizada en todos los dispositivos.</li>
+      <li><strong>📝 Sección de publicaciones:</strong> Artículos y reflexiones sobre mi camino en ingeniería.</li>
+      <li><strong>🔗 Botón de compartir:</strong> Comparte publicaciones con un solo clic.</li>
+      <li><strong>🌓 Modo oscuro/claro:</strong> Tema dinámico con persistencia en localStorage.</li>
+      <li><strong>🖼️ Imagen de perfil:</strong> Nueva forma ovalada con efecto orgánico.</li>
+  </ul>
+  
+  <h4>🛠️ Tecnologías utilizadas</h4>
+  <ul>
+      <li><strong>HTML5 & CSS3:</strong> Estructura y estilos modernos.</li>
+      <li><strong>JavaScript:</strong> Interactividad y dinamismo.</li>
+      <li><strong>FontAwesome & Simple Icons:</strong> Iconografía profesional.</li>
+      <li><strong>Google Fonts:</strong> Tipografía Inter.</li>
+      <li><strong>Glassmorphism:</strong> Estilo visual moderno y elegante.</li>
+  </ul>
+  
+  <p>🌐 <strong>Visita mi portafolio:</strong> <a class = "a_link"  href="https://angelbecerratello.me/" target="_blank" rel="noopener">angelbecerratello.me</a></p>
+  
+  <div class="note-meta-footer">
+      <span><i class="fas fa-tag"></i> Portafolio, Actualización, Diseño</span>
+      <span><i class="far fa-calendar-alt"></i> 18/06/2025</span>
+  </div>`,
+      date: "18/06/2025",
+      category: "Actualización",
+      icon: "fa-rocket",
+      tags: ["Portafolio", "Actualización", "Diseño"],
+      image: "/Contacto/cover_2.png",
+      type: "image",
+    },
+    {
+      id: 3,
       title: "Network Defense - Certificación Cisco",
       excerpt:
         "Certificación en defensa de redes, fortaleciendo mis habilidades en ciberseguridad y detección de amenazas.",
@@ -234,7 +275,7 @@
       type: "image",
     },
     {
-      id: 3,
+      id: 4,
       title: "🔗 LinkedIn Actualizado - Nuevos proyectos y certificaciones",
       excerpt:
         "He renovado mi perfil de LinkedIn con mis proyectos más recientes, certificaciones y experiencia profesional.",
@@ -271,7 +312,7 @@
       type: "image",
     },
     {
-      id: 4,
+      id: 5,
       title: "📄 README del Portafolio Web - Ya disponible",
       excerpt:
         "El README de mi portafolio web ya está subido con toda la información del proyecto.",
@@ -306,17 +347,17 @@
   
   <div class="note-meta-footer">
       <span><i class="fas fa-tag"></i> Portafolio, README, Web</span>
-      <span><i class="far fa-calendar-alt"></i> 2025</span>
+      <span><i class="far fa-calendar-alt"></i> 2026</span>
   </div>`,
       date: "24/04/2026",
       category: "Proyectos",
       icon: "fa-globe",
       tags: ["Portafolio", "README", "Web"],
-      image: "/Contacto/profile_web_out.jpeg",
+      image: "/Contacto/cover.png",
       type: "image",
     },
     {
-      id: 5,
+      id: 6,
       title: "📄 README de GitHub - Mi perfil renovado",
       excerpt:
         "He renovado mi perfil de GitHub con un README que refleja mi identidad como desarrollador full-stack.",
@@ -373,7 +414,7 @@
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Cisco Labs - Configuración de servicios en red",
       excerpt:
         "Configurar DNS, DHCP y HTTP en Packet Tracer fue una experiencia increíble.",
@@ -397,7 +438,7 @@
       type: "image",
     },
     {
-      id: 7,
+      id: 8,
       title: "Cafetería Nostalgia - Sistema de Gestión de Ventas y Facturación",
       excerpt:
         "Plataforma web para la automatización de procesos comerciales en establecimientos gastronómicos.",
@@ -438,7 +479,7 @@
       type: "image",
     },
     {
-      id: 8,
+      id: 9,
       title: "Mi primer videojuego en Java",
       excerpt:
         "Crear un juego sobre historia de Lima en Java fue todo un desafío.",
@@ -463,7 +504,7 @@
       videoId: "csayM97q4m8",
     },
     {
-      id: 9,
+      id: 10,
       title: "Mis inicios en la programación",
       excerpt:
         "Desde mi primer 'Hola Mundo' hasta proyectos full-stack. Así comenzó mi viaje.",
@@ -489,7 +530,7 @@
       type: "image",
     },
     {
-      id: 10,
+      id: 11,
       title: "Puesto 13 en toda la facultad de Ingeniería",
       excerpt:
         "Estar entre los mejores de toda la facultad es un honor y una responsabilidad.",
