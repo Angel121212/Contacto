@@ -71,7 +71,7 @@
         "más...",
       ],
       icon: "fa-keyboard",
-      image: "/Contacto/juego_qhapac_background.png",
+      image: "juego_qhapac_background.png",
       size: "medium",
     },
     {
@@ -79,7 +79,7 @@
       desc: "Aplicación web que permite ver información de la empresa, productos y detalles de lis mismos. Además, cuenta con sección de compra/venta con actualizaciones por parte del administrador.",
       tags: ["JS", "HTML5", "CSS3", "PHP", "más..."],
       icon: "fa-shop",
-      image: "/Contacto/cafeteria_djulia_background.png",
+      image: "cafeteria_djulia_background.png",
       size: "medium",
     },
     {
@@ -87,7 +87,7 @@
       desc: "Aplicación web informativo de la cafetería Nostalgia, la aplicación permite realizar ventas y modificaciones por parte del administrador.",
       tags: ["js", "HTML5", "CSS3", "JAVA", "Spring Boot", "PHP", "h2"],
       icon: "fa-shop",
-      image: "/Contacto/cafeteria_nostalgia_background.png",
+      image: "cafeteria_nostalgia_background.png",
       size: "medium",
     },
     {
