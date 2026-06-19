@@ -1553,7 +1553,6 @@ body.modal-open {
   }
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
   }
   .hero-actions .btn {
     justify-content: center;
