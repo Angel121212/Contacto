@@ -531,26 +531,39 @@
     },
     {
       id: 11,
-      title: "Puesto 13 en toda la facultad de Ingeniería",
+      title: "Puesto 13 en la facultad de Ingeniería - Decimo Superior",
       excerpt:
-        "Estar entre los mejores de toda la facultad es un honor y una responsabilidad.",
+        "Alcanzar el puesto 13 entre 327 estudiantes de la facultad de Ingeniería es un honor y una responsabilidad.",
       content: `<p>Alcanzar el <strong>puesto 13</strong> en el ranking general de la facultad de Ingeniería es uno de los logros que más orgullo me da. No es solo un número, es el reflejo de horas de estudio y dedicación.</p>
-  <h4>¿Cómo lo logré?</h4>
+  
+  <h4>📊 Mi rendimiento académico</h4>
+  <ul>
+      <li><strong>🏆 Mérito - Orden:</strong> 13 de 327 estudiantes</li>
+      <li><strong>📚 Campus:</strong> Lima Norte</li>
+      <li><strong>📈 Promedio:</strong> 18.36</li>
+      <li><strong>🔄 Ciclo relativo:</strong> 06</li>
+      <li><strong>📝 Créditos:</strong> 14</li>
+      <li><strong>⏰ Horas semanales:</strong> 17</li>
+  </ul>
+  
+  <h4>💡 ¿Cómo lo logré?</h4>
   <ul>
       <li><strong>Disciplina:</strong> Estudiar todos los días, aunque sean 30 minutos.</li>
       <li><strong>Curiosidad:</strong> No conformarme con lo que enseñan en clase, investigar por mi cuenta.</li>
       <li><strong>Resiliencia:</strong> Aprender de los fracasos y verlos como oportunidades de crecimiento.</li>
       <li><strong>Networking:</strong> Rodearme de personas que me impulsan a mejorar.</li>
   </ul>
-  <p>Este ranking no es un punto final, sino un recordatorio de que el esfuerzo constante da frutos. Y lo mejor está por venir.</p>
+  
+  <p>Este ranking no es un punto final, sino un recordatorio de que el esfuerzo constante da frutos. Y lo mejor está por venir. 🚀</p>
+  
   <div class="note-meta-footer">
-      <span><i class="fas fa-tag"></i> Ranking, Excelencia, UTP</span>
+      <span><i class="fas fa-tag"></i> Decimo Superior, Ranking, UTP</span>
       <span><i class="far fa-calendar-alt"></i> 2025</span>
   </div>`,
       date: "20/07/2025",
       category: "Logros",
       icon: "fa-medal",
-      tags: ["Ranking", "Excelencia", "UTP"],
+      tags: ["Decimo Superior", "Ranking", "UTP"],
       image:
         "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
       type: "image",
